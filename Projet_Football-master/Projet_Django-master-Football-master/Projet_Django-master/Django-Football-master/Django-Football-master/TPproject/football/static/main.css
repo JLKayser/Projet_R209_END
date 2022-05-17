@@ -4,7 +4,6 @@
     margin:0;
     font-weight:1;
     color:white;
-    cursor: crosshair;
     overflow-x:hidden;
 }
 
@@ -20,6 +19,24 @@ body{background-color:#90EE90;font-family:system-ui,arial;display:flex;align-ite
     font-size:20px;
     width:100vw;
     height:auto;
+}
+
+h1{
+    animation: h1 0.5s;
+}
+
+@keyframes h1{
+    from{
+        transform:translateY(-100px);
+        opacity:0;
+    }
+
+
+    to{
+        transform:translateY(0px);
+        opacity:1;
+    }
+
 }
 
 .nav-list{

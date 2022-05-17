@@ -3,6 +3,7 @@
 Football
 {% endblock %}
 {% block content %}
+    <h1>Ajouter un club</h1>
     <form action="/football/traitement/" method="POST">
     {% csrf_token %}
     {{ form.as_ul }}

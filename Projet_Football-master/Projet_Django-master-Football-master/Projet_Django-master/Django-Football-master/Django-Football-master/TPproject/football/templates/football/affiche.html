@@ -1,0 +1,19 @@
+{% extends "football/main.html" %}
+{% block title %}
+Football
+{% endblock %}
+{% block content %}
+
+    <a href="/football/ajout3/{{club.id}}/"><h1 class="contrat">Signer un contrat chez {{club}}</h1></a>
+<h2> Vous avez ajouté le club suivant : {{club}} | {{club.id}} <br>Le club se trouve en {{club.pays_club}}<br>Le club a gagné {{club.nombre_LDC}} ligue des champions<br>Détail sur {{club}} : {{club.resume}} <br><br> Liste des joueurs dans le club {{club}} : </h2>
+{% for j in joueur %}
+<ul class="ul-list">
+   <li> <h1 style="margin-bottom:13px;">{{j.nom_joueur}}</h1>
+    {{j.nom_joueur}} né le {{j.date_naissance_joueur}} , origine de {{j.pays_joueur}} il a gagnée {{j.nombre_LDC}} ligue des champions.<br><br>
+    Détail sur {{j.nom_joueur}} :
+    {{j.resume}}
+     <a href="/football/delete2/{{j.id}}"><button>Effacer</button></a> <a href="/football/update2/{{j.id}}"><button>Update</button></a></li>
+</ul>
+{% endfor %}
+
+{% endblock %}
